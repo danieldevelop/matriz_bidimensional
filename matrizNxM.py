@@ -30,3 +30,21 @@ def imprimirMatriz(matriz):
         for valores in fila:
             print(valores, end="\t");
         print("");
+
+
+
+if __name__ == "__main__":
+    try:
+        filas = int(input("Ingrese numero de filas: "));
+        columnas = int(input("Ingrese numero de columnas: "));
+
+        print(f"\nMatriz de {filas}x{columnas}");
+
+        matriz = llenarMatriz(filas, columnas);
+        imprimirMatriz(matriz);
+
+    except ValueError:
+        print("Error, ingrese solo números");
+
+
+    input("\nPresione cualquier tecla para salir...");
